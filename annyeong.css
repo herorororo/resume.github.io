@@ -1,0 +1,467 @@
+/* annyeong.css */
+
+@keyframes navbarGlowAnimation {
+  0%, 100% { border-color: #64dd17; box-shadow: 0 0 5px rgba(100, 221, 23, 0.8); } /* Green */
+}
+
+@keyframes sectionBorderAnimation {
+  0%, 100% { border-color: #7bec35; } /* Green */
+  20% { border-color: #096acc; } /* Blue */
+  40% { border-color: #e53935; } /* Red */
+  60% { border-color: #ffeb3b; } /* Yellow */
+  80% { border-color: #9c27b0; } /* Violet */
+}
+
+
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  background-image: url("images/1.png");
+  background-size: cover; /* Make the background image cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; 
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 30px;
+  border: 2px solid #64dd17; /* Initial border color */
+  padding-top: 50px;
+}
+
+/* Night mode styles */
+body.dark-mode {
+  background-color: #333; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+  background-image: url("images/2.png");
+  background-size: cover; /* Make the background image cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; 
+}
+
+
+
+
+.navbar {
+  
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  width: 75%;
+  animation: navbarGlowAnimation 5s infinite; 
+  border-bottom: 2px solid #ddb917; 
+  background-color: rgb(89, 0, 144);
+  /*
+  background-image:url("navbar.jpg"); 
+  background-size: cover; /* Make the background image cover the entire container 
+  background-position: center; /* Center the background image 
+  background-repeat: no-repeat; */
+  height: 60px; 
+  padding: 10px 0;
+  position: fixed;
+  top: 2%;
+  left: 14%;
+  z-index: 1000; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 0 0 0 8;
+}
+
+.navbar.darkmode{
+  background-color: #004d40;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+}
+
+.navbar li {
+  margin: 0;
+  padding: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  color: rgb(81, 185, 91);
+  background-color: #3333335f;
+}
+
+.clock {
+  color: #fff; 
+  font-size: 18px; 
+  margin-left: 10px;
+}
+
+button {
+  
+  margin: 20px;
+  padding: 10px;
+  background-color: #64dd17; /* Pale green for button background color */
+  color: #333; /* Light mode text color for button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode button styles */
+button.dark-mode {
+  background-color: #00796b; /* Dark green for button background color in dark mode */
+  color: #fff; /* Dark mode text color for button */
+}
+
+/* Section styles */
+section {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s, box-shadow 0.5s, border-color 1s; /* Added border-color transition */
+}
+
+/* Glowing borders in dark mode */
+body.dark-mode section {
+  box-shadow: 0 0 10px rgba(100, 221, 23, 0.8); /* Green glowing border in dark mode */
+  animation: sectionBorderAnimation 5s infinite; /* 5s duration, infinite loop */
+  background-color: #444; /* Dark mode section background color */
+}
+
+body.dark-mode section:hover {
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Orange glowing border on hover in dark mode */
+}
+
+/* Night mode section styles */
+body.dark-mode section {
+  background-color: #444; /* Dark mode section background color */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center; /* Center navigation items for smaller screens */
+  }
+
+  .navbar li {
+    text-align: center;
+  }
+}
+
+/* Adjust this CSS rule for the "home" section */
+/* Adjust this CSS rule for the "home" section */
+/* Adjust styles for the "home" section */
+/* Adjust this CSS rule for the "home" section */
+/* Adjust this CSS rule for the "home" section */
+section#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add this line */
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 20px;
+}
+
+section#home .image-container {
+  max-width: 40%;
+}
+
+section#home img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+section#home .text-content {
+  max-width: 50%; /* Adjust this value as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px; /* Add margin to separate image and text content */
+}
+
+/* Adjust styles for h1, h3, and h4 as needed */
+section#home h1{
+  font-size: 300%;
+  font-family: 'Courier New', Courier, monospace;
+}
+section#home h3,
+section#home h4 {
+  font-size: 200%;
+  padding: 3px 0;
+  margin: 5px 0;
+  font-family: 'Cursive', sans-serif;
+}
+
+
+
+/* Add these CSS rules for the "home" section in dark mode */
+body.dark-mode section#home img {
+  animation: glowColorAnimation 6s infinite alternate, glowAnimation 2s infinite alternate;
+  border: 2px solid #64dd17; /* Initial border color */
+  border-radius: 50%;
+  font-family: 'Cursive', sans-serif; 
+}
+
+@keyframes glowAnimation {
+  0% {
+    border: 2px solid #64dd17;
+    box-shadow: 0 0 5px #64dd17;
+  }
+  100% {
+    border: 2px solid #64dd17;
+    box-shadow: 0 0 10px #64dd17;
+  }
+}
+
+@keyframes glowColorAnimation {
+  0% {
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  50% {
+    filter: brightness(1) hue-rotate(180deg);
+  }
+  100% {
+    filter: brightness(1) hue-rotate(360deg);
+  }
+}
+
+/*section#about, */
+/*section#experience,*/
+section#education,
+section#skills {
+  width: 1000px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the section horizontally */
+}
+
+
+
+
+  /* ABOUT */
+section#about {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+body.dark-mode section#about {
+  box-shadow: 0 0 10px rgba(100, 221, 23, 0.8);
+  background-color: #44444461;
+}
+
+
+section#about img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+section#about .text-content {
+  flex: 1;
+}
+
+section#about h2 {
+  color: #00796b;
+  font-size: 250%; /* Increase font size to 250% */
+  font-family: 'Courier New', monospace; 
+}
+
+section#about h4 {
+  color: #333;
+  font-size: 150%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+  
+}
+
+body.dark-mode section#about h2 {
+  color: #64dd17;
+}
+
+body.dark-mode section#about h4 {
+  color: #fff;
+}
+
+.text-content-container {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  /* EXPERIENCE SECTION */
+}
+section#experience{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+body.dark-mode section#experience {
+  box-shadow: 0 0 10px rgba(100, 221, 23, 0.8);
+  background-color: #44444461;
+}
+section#experience img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+section#experience .text-content {
+  flex: 1;
+}
+section#experience h2 {
+  color: #00796b;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+}
+section#experience h3 {
+  color: #333;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+}
+section#experience h4 {
+  color: #333;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+}
+section#experience h5 {
+  color: #333;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+}
+section#experience ul {
+  color: #333;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+
+
+}
+body.dark-mode section#experience h3,
+body.dark-mode section#experience h4,
+body.dark-mode section#experience h5,
+body.dark-mode section#experience ul {
+  color: #fff;
+}
+
+
+/* Education */
+
+section#education{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+body.dark-mode section#education {
+  box-shadow: 0 0 10px rgba(100, 221, 23, 0.8);
+  background-color: #44444461;
+}
+section#educatiion img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+section#education .text-content {
+  flex: 1;
+
+}
+section#education h2 {
+  color: #00796b;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+}
+section#education h3{
+  color: #333;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+}
+section#education ul{
+  color: #333;
+  font-size: 150%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+}
+
+body.dark-mode section#education h3{
+  color: #fff;
+}
+body.dark-mode section#education ul{
+  color: #fff;
+}
+
+/* Skills Section */
+section#skills{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+
+body.dark-mode section#skills {
+  box-shadow: 0 0 10px rgba(100, 221, 23, 0.8);
+  background-color: #44444461;
+}
+section#skills img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+section#skills .text-content {
+  flex: 1;
+
+}
+section#skills h2{
+  color: #00796b;
+  font-size: 200%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+  font-weight: bolder;
+}
+section#skills ul{
+  color: #333;
+  font-size: 150%; /* Increase font size to 200% */
+  font-family: 'Courier New', monospace; 
+  font-weight: bold;
+}
+body.dark-mode section#skills h3{
+  color: #fff;
+}
+body.dark-mode section#skills ul{
+  color: #fff;
+}
+
+body.dark-mode section#about h2, 
+body.dark-mode section#education h2,
+body.dark-mode section#skills h2,
+body.dark-mode section#experience h2 
+{
+  color: #64dd17;
+}
